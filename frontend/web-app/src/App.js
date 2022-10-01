@@ -35,6 +35,16 @@ function App() {
     
   }
 
+  const startDrawingTouch = ({nativeEvent}) => {
+    const touches = nativeEvent.touches[0]
+    const offsetX = touches.clientX
+    const offsetY = touches.clientY
+
+    contextRef.current.beginPath()
+    contextRef.current.moveTo(offsetX, offsetY)
+    setIsDrawing(true)
+    
+  }
   const endDrawing = () => {
     contextRef.current.closePath()
     setIsDrawing(false)
@@ -48,6 +58,15 @@ function App() {
     contextRef.current.lineTo(offsetX, offsetY)
     contextRef.current.stroke()
   }
+  const drawTouch = ({nativeEvent}) => {
+    if (!isDrawing) {
+      return
+    }
+    const offsetX = nativeEvent.touches[0].clientX
+    const offsetY = nativeEvent.touches[0].clientY
+    contextRef.current.lineTo(offsetX, offsetY)
+    contextRef.current.stroke()
+  }
   return (
     <div className="Canvas">
       <canvas
@@ -55,6 +74,9 @@ function App() {
         onMouseDown={startDrawing}
         onMouseUp={endDrawing}
         onMouseMove={draw}
+        onTouchStart={startDrawingTouch}
+        onTouchEnd={endDrawing}
+        onTouchMove={drawTouch}
       />
       
     </div>
