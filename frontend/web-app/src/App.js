@@ -4,6 +4,7 @@ import {React, useRef, useState, useEffect} from 'react'
 
 function App() {
 
+  document.body.style.overflow = "hidden"
   const canvasRef = useRef(null)
   const contextRef = useRef(null)
   const [isDrawing, setIsDrawing] = useState()
