@@ -10,15 +10,15 @@ function App() {
 
   useEffect(() => {
     const canvas = canvasRef.current
-    canvas.width = window.innerWidth * 2
-    canvas.height = window.innerHeight *2
-    canvas.style.width = `${window.innerWidth * 2}px`
-    canvas.style.height =`${window.innerHeight * 2}px`
+    canvas.width = window.innerWidth 
+    canvas.height = window.innerHeight 
+    canvas.style.width = `${window.innerWidth }px`
+    canvas.style.height =`${window.innerHeight }px`
 
 
     const context = canvas.getContext('2d')
 
-    context.scale(2,2)
+    context.scale(1,1)
     context.lineCap ="round"
     context.strokeStyle = "black"
     context.lineWidth = 2
