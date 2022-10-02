@@ -192,7 +192,26 @@ class _DrawScreenState extends State<DrawScreen> {
                 ),
               ),
               TopAppBar(),
-              Positioned(bottom: 0.0, child: Text(label))
+              Positioned.fill(
+                bottom: 0.0,
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          color: Colors.amber,
+                          child: Text(label,
+                              style: TextStyle(fontSize: 25, height:0.9,),
+                              textAlign: TextAlign.left),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
