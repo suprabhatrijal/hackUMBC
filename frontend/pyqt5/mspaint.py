@@ -10,10 +10,11 @@ import os, io
 from google.cloud import vision_v1
 from google.cloud.vision_v1 import types
 from dotenv import load_dotenv
+import asyncio
 
 config = load_dotenv(".env") 
 
-def getText():
+async def getText():
 	client = vision_v1.ImageAnnotatorClient()
 
 
@@ -177,8 +178,8 @@ class Window(QMainWindow):
 			# make drawing flag false
 			self.drawing = False
 			self.image.save("apple.png")
-			getText()
-
+			asyncio.run(getText())
+			
 	# paint event
 	def paintEvent(self, event):
 		# create a canvas
