@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const canvas = canvasRef.current
-    canvas.width = window.innerWidth 
+    canvas.width = window.innerWidth  
     canvas.height = window.innerHeight 
     canvas.style.width = `${window.innerWidth }px`
     canvas.style.height =`${window.innerHeight }px`
@@ -38,8 +38,9 @@ function App() {
 
   const startDrawingTouch = ({nativeEvent}) => {
     const touches = nativeEvent.touches[0]
-    const offsetX = touches.clientX
-    const offsetY = touches.clientY
+    console.log(touches)
+    const offsetX = touches.pageX
+    const offsetY = touches.pageY
 
     contextRef.current.beginPath()
     contextRef.current.moveTo(offsetX, offsetY)
@@ -63,8 +64,8 @@ function App() {
     if (!isDrawing) {
       return
     }
-    const offsetX = nativeEvent.touches[0].clientX
-    const offsetY = nativeEvent.touches[0].clientY
+    const offsetX = nativeEvent.touches[0].pageX
+    const offsetY = nativeEvent.touches[0].pageY
     contextRef.current.lineTo(offsetX, offsetY)
     contextRef.current.stroke()
   }
