@@ -20,7 +20,13 @@ class RekognizeProvider extends ChangeNotifier{
     }));
 
     WebLabel _bestGuessLabel;
-    return _response.responses[0].fullTextAnnotation.text;
+    if (_response.responses[0].fullTextAnnotation == null){
+      return "";
+    }
+    else{
+
+      return _response.responses[0].fullTextAnnotation.text;
+    }
     // print(_response);
 
     // return _bestGuessLabel;
