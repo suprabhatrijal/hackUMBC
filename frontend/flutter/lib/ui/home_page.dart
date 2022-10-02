@@ -29,16 +29,17 @@ class DrawScreen extends StatefulWidget {
 class _DrawScreenState extends State<DrawScreen> {
   @override
   final controller = ScreenshotController();
+  String label = "";
   Widget build(BuildContext context) {
     String _recognizedText = '';
-    return Screenshot(
-      controller: controller,
-      child: Scaffold(
-        body: Builder(
-          builder: (BuildContext context) => SafeArea(
-            child: Stack(
-              children: [
-                Consumer<SheetsViewProvider>(
+    return Scaffold(
+      body: Builder(
+        builder: (BuildContext context) => SafeArea(
+          child: Stack(
+            children: [
+              Screenshot(
+                controller: controller,
+                child: Consumer<SheetsViewProvider>(
                   builder: (context, sheetView, child) {
                     return sheetView.isGrid
                         ? GridPaper(
@@ -97,10 +98,13 @@ class _DrawScreenState extends State<DrawScreen> {
                                                   await controller.capture();
                                               final base64Image =
                                                   base64Encode(image);
-                                              final label = await context
+
+                                              final resp = await context
                                                   .read<RekognizeProvider>()
                                                   .search(base64Image);
-                                              print(label);
+                                              setState(() {
+                                                label = resp;
+                                              });
                                             },
                                             child: CustomPaint(
                                               painter: DrawPen(points: points),
@@ -157,16 +161,20 @@ class _DrawScreenState extends State<DrawScreen> {
                                             },
                                           );
                                         },
-                                        onPanEnd: (DragEndDetails details) async {
+                                        onPanEnd:
+                                            (DragEndDetails details) async {
                                           deletedPoints.clear();
                                           points.add(null);
                                           final image =
                                               await controller.capture();
                                           final base64Image =
-                                          base64Encode(image);
-                                          final label = await context
+                                              base64Encode(image);
+                                          final resp = await context
                                               .read<RekognizeProvider>()
                                               .search(base64Image);
+                                          setState(() {
+                                            label = resp;
+                                          });
                                           print(label);
                                         },
                                         child: CustomPaint(
@@ -182,13 +190,14 @@ class _DrawScreenState extends State<DrawScreen> {
                           );
                   },
                 ),
-                TopAppBar(),
-                Positioned(
-                  right: 0.0,
-                  child: RightBar(),
-                ),
-              ],
-            ),
+              ),
+              TopAppBar(),
+              Positioned(
+                right: 0.0,
+                child: RightBar(),
+              ),
+              Positioned(bottom: 0.0, child: Text(label))
+            ],
           ),
         ),
       ),

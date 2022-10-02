@@ -56,15 +56,7 @@ class BottomLeftBar extends StatelessWidget {
             ),
             onPressed: _launchURL,
           ),
-          IconButton(
-            padding: EdgeInsets.all(8.0),
-            icon: Icon(
-              FontAwesomeIcons.camera,
-              color: iconColor,
-              size: iconSize,
-            ),
-            onPressed: () => context.read<ScreenshotProvider>().takeScreenshot(),
-          ),
+
           // SizedBox(height: 10),
         ],
       ),
