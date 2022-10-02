@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "shaped-gravity-364218",
+  "private_key_id": "248dcbf1d40a72cafd54d385fc47d87626d2ede9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQD4PwetldM2gWHM\nGiNlcwbm4rlYMGFZle5EnK27FwouYalSkTO50eo0t+rY8U4WSwel47tmOk/TNzhh\nmx2YoxekecsYLCzMMeVgxMKyca/bwUgVHnF5sqWJfrMwXR4ofvfB8girRVtTviqO\nEWIbYl/mBMqt29NbQg8Ct+5M4K5dXm6uK9sPAuHm/dl1mIjdZgMdjb+055ZZCLXQ\nBYkSUOvmgqZicUYVf+IWcyf68WJdemorsifXezC5Vtw3kecxVETa0tw5QJVEEf9Z\n+hhGJeeOQNXXYiV4HFUdjoOMpbMR/b3YvwmyjvP5ATzhOV1xP+9JuYBD016EyfgP\nJ1DA2/DdAgMBAAECggEACOYDGaVqbsrwfU2qjlmZmiK8AuQPeUcDxXdzgTNWoBb/\nTmbG2rBVm6vEDu0hBj3zEwhr9twipGJkWP6KCKcMxk6MIylInQExq0674Lc5vVmn\n6QN9JqAEVj6YBotjKClBxE5iu5DyFx+Uv7olZCOAmh3HdITFH/S11dXpN6qnu9Az\nehnqDOnP6IIo24bYo43Gyzk1aiLl5Sk9M9J1gFMVILpS8802ACF4nTzDawT5hgx3\nPpGyG4SCjefULBExH6vrhOHjOUBZIGIRJh7ywWf9O99rSsUiFUil2Yz5O5CztwbU\nQG5Tc61sllRoDRBN22PVGlIWofUGcEhq17i9jvgjWQKBgQD+y9ZZy1KPgapT3Bu1\nY6E1POjc+/CXWStkEUk62iNw74a+liCEaoxARwEK0zZH7l2EygTzUgoZHf+hORds\nY0fKpvl03mw+N5rDuPX+prn6oyiwjYSZkaOyaHa4Yz3/wbQvOM7CQgwbmlE0tbje\nBimUx81scS9XyH/hpJOO63ocSwKBgQD5a0VRGGA+9rBvqivGh5W7xCLrgwLDA57Q\n9Ctbjz/CpXHOSOA7AUXCpJ8oS0zv/061XTcXchumOrSAyrhVfErPoydfmkFFqf+L\nSizvWJhRGgMu24nDFR6LMO14XtpJue6fDSduq2RY8QoW6tH/H+36z/KvsXaFAIAl\ne6qAhlgedwKBgC6GjBKDdQTtWWvMsmaR1bsB70eC3bDVQH4aRfPwJy6VHlao1TE4\nv3lxPbh7TtsdpIf915+SqHNjre0DnspU6qQPj1eO0dceki0RFiI00Zr5thFfFgpw\ntKJ8Psl2nbiY500EI4UHSGy15gQo9qPcHjWjslgN5uYxn2BVi/g5+Wc3AoGBALt8\n125OVIsABUDrOlzSLswmc9l1ce4GGqwX3z/EPrmihBn8zhGMs1PNS5aOhBckY5YR\nrAgDzqT2HBl0SXx5IgNTMZW77rTfRSj/aSfCAT11wE7I2JW8mmknLlr9cjlZevY0\nfR/D1nrFNkBj49dTuSCAkH1heSYhajLC8zgJxNOhAoGBAP1+F4BDvPm9naJbu1xW\nsBfZOirUJq+gD9aEpoIqi0bRFr/jJIv+H4WaYtwjnb5dGs2xQ9y0NRCSPRIxv4mC\nqo5hTolprXSPO3VdS6x//tWN1BAqzzStnDaP/ztqYXaAEEgYzFONg1QCmU9H+qBC\nAXGYabaYvMX6QcnOUQKbtRFt\n-----END PRIVATE KEY-----\n",
+  "client_email": "visionaiproject@shaped-gravity-364218.iam.gserviceaccount.com",
+  "client_id": "111987411330007570965",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/visionaiproject%40shaped-gravity-364218.iam.gserviceaccount.com"
+}
