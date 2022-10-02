@@ -30,8 +30,8 @@ class _DrawScreenState extends State<DrawScreen> {
   @override
   final controller = ScreenshotController();
   String label = "";
+  String _recognizedText = '';
   Widget build(BuildContext context) {
-    String _recognizedText = '';
     return Scaffold(
       body: Builder(
         builder: (BuildContext context) => SafeArea(
@@ -192,10 +192,6 @@ class _DrawScreenState extends State<DrawScreen> {
                 ),
               ),
               TopAppBar(),
-              Positioned(
-                right: 0.0,
-                child: RightBar(),
-              ),
               Positioned(bottom: 0.0, child: Text(label))
             ],
           ),
