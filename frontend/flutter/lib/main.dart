@@ -8,6 +8,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:drawing_app/providers/screenshot_provider.dart';
+import 'package:drawing_app/providers/rec.dart';
+import 'package:screenshot/screenshot.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() async {
@@ -30,7 +33,7 @@ void main() async {
 
 class MainApp extends StatelessWidget {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
-
+  final controller = ScreenshotProvider().controller;
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -55,6 +58,12 @@ class MainApp extends StatelessWidget {
             ),
             ChangeNotifierProvider.value(
               value: EraserProvider(),
+            ),
+            ChangeNotifierProvider.value(
+              value: ScreenshotProvider(),
+            ),
+            ChangeNotifierProvider.value(
+              value: RekognizeProvider(),
             ),
           ],
           child: MaterialApp(

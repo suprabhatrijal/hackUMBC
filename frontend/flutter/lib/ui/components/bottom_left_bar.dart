@@ -4,6 +4,7 @@ import 'package:drawing_app/ui/styles/icon_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
+import 'package:drawing_app/providers/screenshot_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class BottomLeftBar extends StatelessWidget {
@@ -55,7 +56,16 @@ class BottomLeftBar extends StatelessWidget {
             ),
             onPressed: _launchURL,
           ),
-          SizedBox(height: 10),
+          IconButton(
+            padding: EdgeInsets.all(8.0),
+            icon: Icon(
+              FontAwesomeIcons.camera,
+              color: iconColor,
+              size: iconSize,
+            ),
+            onPressed: () => context.read<ScreenshotProvider>().takeScreenshot(),
+          ),
+          // SizedBox(height: 10),
         ],
       ),
     );

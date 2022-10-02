@@ -10,5 +10,5 @@ double brushWidth = 4.0;
 Color brushColor = Colors.blue;
 int count = 0;
 StrokeCap strokeCap = StrokeCap.round;
-String githubUrl = 'https://github.com/mrmayurgithub/DrawingBoard';
+String githubUrl = 'https://github.com/suprabhatrijal/hackUMBC';
 double eraserWidth = 30.0;
